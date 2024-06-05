@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+          //   //         function soustraction (a, b) {
+          //   //             let resultat = a - b
+          //   //             return resultat
+          //   //         }
+          //   //         let resultat = soustraction(6,4)
+          //   //         console.log(resultat);
+
+
+          //   //         let substract = function (x,y) {
+          //   //             return x - y
+
+          //   //         }
+          //   //         let res = substract(9,8)
+          //   //         console.log(res);
+
+          //   // //function fléchée =>
+
+          //   //         const multiplication = (s,f) => {
+          //   //             let resultat = s * f
+          //   //             console.log(resultat);
+          //   //         }
+
+          //   //         const sansArg = () => {
+          //   //             console.log('salut');
+          //   //         }
+          //   //         multiplication(3,7)
+
+          //   //         sansArg()
+
+          //   //         let button = document.getElementById('btn')
+          //   //         button.addEventListener('click', ()=> {
+          //   //             console.log("button desactivé");
+          //   //             btn.disabled = true
+          //   //         })
+
+
+
+
+          //   let utilisateur = {
+          //       email: 'pierre@gmail.com',
+          //       prenom: 'Pierre',
+          //       nom: 'Dupont',
+          //       tel: '06060606',
+
+          //       Adresse: {
+
+          //           Voie: 12,
+          //           Rue: 'banga',
+          //           codepostal: 64000,
+          //           Ville: 'Pau',
+          //         },
+
+
+          //       compétences: [
+          //           'html',
+          //           'css',
+          //           'angular',
+          //           'symphony'
+          //       ]
+
+          //   }
+          //   console.log(utilisateur);
+          //   utilisateur.Adresse.permis = 'B' // pour ajouter le permis de l'utilisateur
+          //   let cles = Object.keys(utilisateur)
+          //   console.log(cles);
+
+          // //differente methode pour afficher que les competences de l'utilisateur
+          //   for (let element of utilisateur.compétences) {
+          //     console.log(element);
+          //   }
+
+
+          //   let competences = utilisateur.compétences
+          //   competences.forEach(e => {
+          //     console.log('competence est ',e);
+          //   })
+
+
+          //   for (let i=0; i<= utilisateur.compétences.length; i++) {
+          //     console.log(utilisateur.compétences[i]);
+          //   }
+
+          //   utilisateur.compétences.map(competence =>)
+
+
+      // Objet et Tableau
+      
+      let utilisateur = {
+          email: 'exemple@gmail.com',
+          prenom: 'pierre',
+          nom: 'dupond',
+          age: 33,
+          tel: '06 88 77 66 55',
+          adresse: {
+              voie: 4,
+              rue: 'jean mermoz',
+              ville: 'pau',
+              codePostal: 64000
+          },
+          competences: [
+              'HTML',
+              'CSS',
+              'JS',
+              'PHP',
+              'PYTHON',
+              'REACT',
+              'NODE',
+              'ANGULAR',
+              'WORDPRESS',
+              'SYMFONY',
+              'EXPRESS',
+              'FIGMA',
+              'JS'
+          ]
+      }
+
+      console.log(utilisateur.ville)
+      utilisateur.adresse.permis = 'B'
+      let cles = Object.keys(utilisateur)
+
+      // console.log(cles)
+
+
+      for (let cle in utilisateur) {
+          // console.log(cle);
+      }
+
+      for (let element of utilisateur.competences) {
+          // console.log(element);
+      }
+
+
+      let competences = utilisateur.competences
+      competences.forEach(e => {
+          // console.log('compÃ©tence est ',e)
+      })
+
+      for (let i=0; i<=utilisateur.competences.length; i++) {
+          // console.log(utilisateur.competences[i])
+      }
+
+      utilisateur.competences.map(competence => console.log(competence))
+
+      let resultat = competences.filter(item => item=== 'HTML' || item=== 'JS')
+      console.log(resultat);
+       let res2 = competences.find(el => el === 'JS')
+       console.log(res2)
+       let index = competences.indexOf('JS')
+       console.log("index de JS est ",index)
+
+
+    //    let arr1 = [
+    //           'HTML',
+    //           'CSS',
+    //           'JS',
+    //           'PHP',
+    //       ]
+
+    //       let arr2 = [
+    //           'PYTHON',
+    //           'REACT',
+    //           'NODE',
+    //           'ANGULAR',
+    //           'WORDPRESS',
+    //       ]
+
+    //       console.log(arr1);
+    //       console.log(arr2);
+
+    //       let arr3 = arr2.concat(arr1)
+    //       console.log(arr3);
+    //       prenom: 'pierre',
+    //       nom: 'dupond',
+    //       age: 33,
+    //       tel: '06 88 77 66 55',
+    //       adresse: {
+    //           voie: 4,
+    //           rue: 'jean mermoz',
+    //           ville: 'pau',
+    //           codePostal: 64000
+    //       },
+
+    //       competences: [
+    //           'HTML',
+    //           'CSS',
+    //           'JS',
+    //           'PHP',
+    //           'PYTHON',
+    //           'REACT',
+    //           'NODE',
+    //           'ANGULAR',
+    //           'WORDPRESS',
+    //           'SYMFONY',
+    //           'EXPRESS',
+    //           'FIGMA',
+    //           'JS'
+    //       ]
+    
+
+    //   console.log(utilisateur.ville)
+    //   utilisateur.adresse.permis = 'B'
+    //   let cles = Object.keys(utilisateur)
+    //   // console.log(cles)
+
+
+    //   for (let cle in utilisateur) {
+    //       // console.log(cle);
+    //   }
+
+    //   for (let element of utilisateur.competences) {
+    //       // console.log(element);
+    //   }
+
+
+    //   let competences = utilisateur.competences
+    //   competences.forEach(e => {
+    //       // console.log('compÃ©tence est ',e)
+    //   })
+
+    //   for (let i=0; i<=utilisateur.competences.length; i++) {
+    //       // console.log(utilisateur.competences[i])
+    //   }
+
+    //   utilisateur.competences.map(competence => console.log(competence))
+
+    //   let resultat = competences.filter(item => item=== 'HTML' || item=== 'JS')
+    //   console.log(resultat);
+    //    let res2 = competences.find(el => el === 'JS')
+    //    console.log(res2)
+    //    let index = competences.indexOf('JS')
+    //    console.log("index de JS est ",index)
+
+
+    //    let arr1 = [
+    //           'HTML',
+    //           'CSS',
+    //           'JS',
+    //           'PHP',
+    //       ]
+
+    //       let arr2 = [
+    //           'PYTHON',
+    //           'REACT',
+    //           'NODE',
+    //           'ANGULAR',
+    //           'WORDPRESS',
+    //       ]
+    //       console.log(arr1);
+    //       console.log(arr2);
+
+    //       let arr3 = arr2.concat(arr1)
+    //       console.log(arr3);
+
+
+
+            let tab1 = ['lundi', 'Mardi', 'Mercredi']
+            let tab2 = ['jeudi', 'Vendredi', 'Samedi']
+            console.log(tab1);
+            console.log(tab2);
+
+            let tab3 = tab1.concat(tab2)
+            console.log(tab3);
+
+    </script>
+  </body>
+</html>

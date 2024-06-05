@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fruits = ["apple", "banana", "cherry"];
+      console.log(fruits);
+      // ajouter orange à la fin du tableau
+
+      fruits.push("Orange");
+      console.log(fruits);
+
+      // supprimer le premier element du tableau
+
+      let firstElement = fruits.shift();
+      console.log(fruits);
+
+      // afficher la longueur du tableau
+
+      console.log(fruits.length);
+
+      // parcourir le tableau
+
+      fruits.forEach((element) => console.log(element));
+
+      // creer un objet
+
+      let persons = {
+        firstName: "Jhon",
+        lastName: "Doe",
+        âge: 30,
+        City: {
+          ville: "New York",
+        },
+      };
+      console.log(persons);
+
+      //modifier l'age
+
+      persons.âge = "31";
+      console.log(persons);
+
+      // supprimer le lastName
+
+      // Reflect.deleteProperty(persons,'lastName');
+      // console.log(persons);
+
+      delete persons.lastName;
+      console.log(persons);
+
+      // parcourir les objets d'un tableau
+
+      for (let i = 0; i < persons.length - 1; i++) {
+        console.log(persons.value);
+      }
+
+      //afficher les clés et valeur
+
+      for (let cle in persons) {
+        console.log(cle, persons[cle]);
+      }
+
+      let people = [
+        {nom: "Hafiz", age: "25"},
+        {nom: "Moursyl", age: "11"},
+        {nom: "Rahmallah", age: "12"}
+      ];
+
+      //ajouter un nouvel objet 
+
+      let personne = {nom: "David", age: "40"}
+      people.push(personne)
+      console.log(people[1].age); 
+
+      // afficher l'age de la 2ème pers du tab
+
+      let filtrepeople = people.filter(x => x.nom == "Moursyl")
+      console.log(filtrepeople[0].age);
+      console.log(filtrepeople[0]["age"]);
+
+
+      let deuxElement = people.find(y => y.age == "11").nom
+      console.log(deuxElement);
+
+      //parcourir tableau et afficher nom de chaq pers
+
+      people.map(z => console.log(z))
+
+      for (const persons of people) {
+        console.log(persons.name);
+        console.log(persons["name"]);
+//for of pour afficher un tableau et for in pour un objet
+      }
+    </script>
+  </body>
+</html>
